@@ -72,7 +72,7 @@
             this.Loginbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Loginbutton.Location = new System.Drawing.Point(65, 170);
             this.Loginbutton.Name = "Loginbutton";
-            this.Loginbutton.Size = new System.Drawing.Size(126, 49);
+            this.Loginbutton.Size = new System.Drawing.Size(130, 49);
             this.Loginbutton.TabIndex = 4;
             this.Loginbutton.Text = "Log in";
             this.Loginbutton.UseVisualStyleBackColor = true;
