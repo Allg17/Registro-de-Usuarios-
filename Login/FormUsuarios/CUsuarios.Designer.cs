@@ -129,6 +129,7 @@
             this.Controls.Add(this.ConsultadataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CUsuarios";
             this.Text = "Consulta de usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();

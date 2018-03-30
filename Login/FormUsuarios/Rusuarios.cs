@@ -41,9 +41,25 @@ namespace Login.Usuarios
             ContraseñaerrorProvider.Clear();
             ComentarioerrorProvider.Clear();
         }
-
-        private int SetError(int error)
+        //enum Tipos
+        //{
+        //    Limpiar=0,
+        //    Llenaclase = 1,
+        //    LlenaCampos= 2
+        //}
+        private int SetError(int error/*,Tipos tipo*/)
         {
+            //switch (tipo)
+            //{
+            //    case Tipos.Limpiar:
+            //        break;
+            //    case Tipos.Llenaclase:
+            //        break;
+            //    case Tipos.LlenaCampos:
+            //        break;
+            //    default:
+            //        break;
+            //}
             int paso = 0;
             List<Usuario> user = new List<Usuario>();
             if(error ==1&& IDnumericUpDown.Value == 0)
@@ -88,7 +104,7 @@ namespace Login.Usuarios
                 paso = 1;
             }
 
-            if(error ==4 &&BLL.UsuarioBLL.GetList(t => t.NUsuario == UsuariotextBox.Text).Exists(t => t.NUsuario == UsuariotextBox.Text))
+            if(error ==4 &&BLL.UsuarioBLL.GetList(t => t.NUsuario == UsuariotextBox.Text).Exists(t => t.NUsuario == UsuariotextBox.Text) && IDnumericUpDown.Value == 0)
             {
                 UsuarioerrorProvider.SetError(UsuariotextBox, "Debe de crear otro usuario!!");
                 paso = 1;
@@ -106,7 +122,7 @@ namespace Login.Usuarios
                 MessageBox.Show("Campos Vacios!!");
                 return;
             }
-            if (SetError(4) == 1)
+            if (SetError(4) == 1 && IDnumericUpDown.Value == 0)
             {
                 MessageBox.Show("Usuario existente!!");
                 return;

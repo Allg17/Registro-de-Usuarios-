@@ -26,7 +26,7 @@ namespace Login
             List<Usuario> user = new List<Usuario>();
 
             limpiarError();
-            filtrar = t => t.NUsuario.Contains(UsuariologtextBox.Text);
+            filtrar = t => t.NUsuario.Contains(UsuariologtextBox.Text);//equals 
             user = BLL.UsuarioBLL.GetList(filtrar);
             if(UsuariologtextBox.Text==string.Empty )
             {

@@ -39,7 +39,7 @@ namespace Login.FormUsuarios
                     break;
                 //fecha
                 case 2:
-                    filtrar = t => (t.Fecha >= AHoradateTimePicker1.Value) && (t.Fecha <= FInaldateTimePicker2.Value);
+                        filtrar = t => (t.Fecha >= AHoradateTimePicker1.Value) && (t.Fecha <= FInaldateTimePicker2.Value);
                     break;
                 //Usuario
                 case 3:
